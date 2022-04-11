@@ -1,0 +1,15 @@
+.main--container {
+  width: 100%;
+  min-height: 100%;
+  background-color: var(--colorNeutralDark)
+}
+
+.main--content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  height: 100vh;
+  margin: 60px auto 0;
+
+}
