@@ -1,9 +1,7 @@
 import React, {useContext, useState} from 'react'
 import {Context} from '../../Context/Context'
-// import Jimp from 'jimp'
-// import {sizeOf} from 'image-size'
 import './Form.css'
-
+import {preventDefaults, validFileType} from '../../Helpers'
 
 export default function Form() {
 
@@ -17,32 +15,24 @@ export default function Form() {
     // console.log(dimensions.width, dimensions.height)
 
 
-    const {createImageData} = useContext(Context)
+    const {createImageData, addImage} = useContext(Context)
 
     function handleDropFiles(event) {
         preventDefaults(event)
         const files = event.target.files
-        const file = event.target.value
-        console.log(files);
-        console.log(file);
+        // const file = event.target.value
         handleFiles(files)
-
     }
 
-    function preventDefaults(e) {
-        e.preventDefault()
-        e.stopPropagation()
-    }
 
     function handleFiles(files) {
-        ([...files].forEach(file => {
-                // console.log(file)
-                // console.log(file.getAttribute());
-
-                createImageData(file)
+        [...files].forEach(file => {
+            if (!validFileType(file)) {
+                alert(`Plik o nazwie ${file.name} nie jest obsługiwany!`)
+            } else {
+                addImage(file)
             }
-        ))
-
+        })
     }
 
     return (

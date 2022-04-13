@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-
+import {validFileType} from '../Helpers'
 import {nanoid} from 'nanoid'
 
 const Context = React.createContext()
@@ -26,21 +26,21 @@ function ContextProvider({children}) {
         if (validFileType(image)) {
             console.log(image);
             console.log(image.type);
-            console.log(image.size/1024);
+            console.log(image.size / 1024);
             console.log(image.width);
             console.log(typeof image);
 
-          console.log(image);
+            console.log(image);
 
-            let url,foldersAndFile,folders,folderpath,protocol,host,ourLocation;
+            let url, foldersAndFile, folders, folderpath, protocol, host, ourLocation;
             url = window.location;
             foldersAndFile = url.pathname.split("/");
-            folders = foldersAndFile.slice(0,foldersAndFile.length-1);
+            folders = foldersAndFile.slice(0, foldersAndFile.length - 1);
             folderpath = folders.join("/");
-            protocol = url.protocol+"//";
+            protocol = url.protocol + "//";
             host = url.host;
 
-            ourLocation=protocol+host+folderpath;
+            ourLocation = protocol + host + folderpath;
 
             console.log(url);
 
@@ -68,28 +68,16 @@ function ContextProvider({children}) {
     }
 
 
-    const fileTypes = [
-        "image/apng",
-        // "image/bmp",
-        // "image/gif",
-        "image/jpeg",
-        "image/pjpeg",
-        "image/png",
-        // "image/svg+xml",
-        // "image/tiff",
-        // "image/webp",
-        // "image/x-icon"
-    ];
-
-    function validFileType(file) {
-        return fileTypes.includes(file.type);
+    function addImage(newImage) {
+        setAllImages(prevImages => [...prevImages, newImage])
     }
 
-    // console.log(image);
+
+    console.log(`allImages ${allImages}`);
 
     return (
         <Context.Provider value={{
-
+            addImage,
             createImageData
         }}
         >
