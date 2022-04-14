@@ -73,11 +73,12 @@ function ContextProvider({children}) {
     }
 
 
-    console.log(`allImages ${allImages}`);
+    // console.log(`allImages ${allImages}`);
 
     return (
         <Context.Provider value={{
             addImage,
+            allImages,
             createImageData
         }}
         >

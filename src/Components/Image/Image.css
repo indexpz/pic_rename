@@ -1,0 +1,9 @@
+.image--container {
+  max-width: 100%;
+  /*margin-top: 20px;*/
+}
+
+.image--container > img {
+  object-fit: scale-down;
+  width: 100%
+}
