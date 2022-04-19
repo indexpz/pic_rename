@@ -9,7 +9,7 @@ import {Context} from "../../Context/Context";
 export default function Main() {
 
 
-    const { allImages} = useContext(Context)
+    const {allImages} = useContext(Context)
 
     const imageElements = allImages.map(image =>
         <Image key={nanoid()} image={image}/>)
