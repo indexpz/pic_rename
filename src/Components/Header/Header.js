@@ -6,9 +6,9 @@ import logo from '../../Images/index_logo.svg'
 export default function Header() {
     return (
         <div className="header--container">
-            <a href="https://indexpz.pl"><img src={logo} alt="logo"/></a>
+            <a href="https://indexpz.pl" target="_blank" rel="noopener"><img src={logo} alt="logo"/></a>
             <ul>
-                <li><Link to='/help' className='header--link'>Jak to działa</Link></li>
+                <li><Link to='/help' className='header--link' >Jak to działa</Link></li>
             </ul>
         </div>
     )

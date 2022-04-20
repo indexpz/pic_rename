@@ -9,7 +9,7 @@ const fileTypes = [
     // "image/bmp",
     // "image/gif",
     "image/jpeg",
-    "image/pjpeg",
+    "image/jpeg",
     "image/png",
     // "image/svg+xml",
     // "image/tiff",

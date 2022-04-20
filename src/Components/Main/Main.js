@@ -12,7 +12,7 @@ export default function Main() {
     const {allImages} = useContext(Context)
 
     const imageElements = allImages.map(image =>
-        <Image key={nanoid()} image={image}/>)
+        <Image key={nanoid()} image={image} id={nanoid()}/>)
 
     return (<div className='main--container'>
             <div className="main--content">

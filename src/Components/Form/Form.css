@@ -2,7 +2,8 @@
   width: 100%;
 }
 
-#file-input{
+#file-input,
+.btn-file-input{
   width: 100%;
   height: 156px;
   background-color: var(--colorForm);
@@ -10,7 +11,8 @@
   line-height: 156px;
 }
 
-#file-input::before {
+#file-input::before,
+.btn-file-input::before{
   display: block;
   text-align: center;
   line-height: 156px;
@@ -32,6 +34,7 @@
   visibility: hidden;
 }
 
-#file-input:hover::before{
+#file-input:hover::before,
+.btn-file-input:hover::before{
   color: var(--colorBackground)
 }

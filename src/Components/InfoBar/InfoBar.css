@@ -1,0 +1,46 @@
+.info-bar--container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 4px;
+  grid-auto-rows: minmax(20px, auto);
+
+  width: 100%;
+  border-radius: 5px;
+  padding: 8px;
+  font-size: 0.8rem;
+  color: var(--colorBackground);
+  background-color: var(--colorPrimary);
+  margin: 10px 0 40px;
+}
+
+.info-bar--name, .info-bar--new-name {
+  grid-column: 1 / 4;
+  grid-row: 1;
+}
+
+.info-bar--new-name{
+  grid-row: 3;
+}
+
+.info-bar--new-name span{
+  font-weight: 800;
+  color: var(--colorBackground);
+}
+
+.info-bar--delete{
+  grid-column: 3;
+}
+
+.btn{
+  width: 100%;
+  height: 24px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 5px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.btn:hover{
+  background-color: var(--colorAccent);
+}
