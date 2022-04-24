@@ -1,0 +1,40 @@
+.info--container{
+  width:50%;
+  min-height: 80vh;
+  object-fit: contain;
+  margin: 40px auto;
+}
+
+.info--container>h2{
+  font-size: 30px;
+  color: var(--colorForm);
+
+}
+.info--container>h2>span{
+  color: var(--colorAccent);
+}
+
+.info--container>p{
+  color: var(--colorForm);
+  margin-top: 10px;
+}
+
+.info--container>h4{
+  color: var(--colorForm);
+  font-size: 20px;
+  margin-top: 30px;
+}
+
+.info--container>ul{
+  color: var(--colorForm);
+  margin-left: 16px;
+  list-style: none;
+}
+
+.info--container>ul>li::before{
+  content: "•";
+  color: var(--colorAccent);
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em
+}

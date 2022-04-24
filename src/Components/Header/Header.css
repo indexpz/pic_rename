@@ -8,13 +8,23 @@
   padding: 0 10%;
 }
 
-.header--container a img{
+.header--logo{
   display: block;
   width: 80px;
   min-height: 60px;
   object-fit: contain;
   margin-right: auto;
 }
+
+.header--container ul{
+  display: flex;
+}
+
+.header--container ul li{
+  margin-left: 15px;
+  list-style-type: none;
+}
+
 
 .header--link{
   font-size: 1rem;
@@ -24,5 +34,9 @@
 }
 
 .header--link:hover{
-  color: var(--colorAccent)
+  color: var(--colorAccent);
+}
+
+.active{
+  color: var(--colorAccent);
 }
