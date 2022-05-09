@@ -1,8 +1,8 @@
-import React, {useContext, useState, useRef} from 'react'
+import React, {useContext} from 'react'
 import {Context} from '../../Context/Context'
 import './Form.css'
 import {preventDefaults, validFileType} from '../../Helpers'
-import Image from "../Image/Image";
+
 
 export default function Form() {
     const {addImage} = useContext(Context)
@@ -28,26 +28,18 @@ export default function Form() {
 
     return (
         <div className="form--drop-area">
-            <form>
+                <label className="form--drop-area-label" htmlFor="file-input">
+                    <i className="ri-file-upload-line fi"></i> Wybierz pliki jpg lub png klikając w to okno lub upuść je do tej ramki!
+                </label>
                 <input
-                    // style={{display: 'none'}}
                     type="file"
                     id="file-input"
                     name="file-input"
                     multiple
                     accept="image/png, image/jpeg, image/jpg"
                     onChange={dropFilesHandler}
-                    // onClick={dropFilesHandler}
-                    // ref={fileInput}
+                    className="file-input"
                 />
-                {/*<button*/}
-                {/*    className='btn-file-input'*/}
-                {/*    ref={fileInput}*/}
-                {/*>*/}
-                {/*    Wybierz pliki jpg lub png klikając w to okno lub upuść je do tej ramki!*/}
-                {/*</button>*/}
-
-            </form>
         </div>
     )
 

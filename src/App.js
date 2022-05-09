@@ -11,8 +11,8 @@ function App() {
     return (<div className="app--container">
             <Header/>
             <Routes>
-                <Route path="/picRenamer/" element={<Main/>}/>
-                <Route path="/picRenamer/info/" element={<Info/>}/>
+                <Route path="/picrenamer/" element={<Main/>}/>
+                <Route path="/picrenamer/info/" element={<Info/>}/>
                 <Route path="/*" element={<Error/>}/>
             </Routes>
             <Footer/>

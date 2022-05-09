@@ -1,0 +1,17 @@
+.settings--container{
+  width: 90%;
+  position: relative;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 4px;
+  grid-auto-rows: minmax(20px, auto);
+  font-size: 0.8rem;
+  color: var(--colorBackground);
+  background-color: var(--colorPrimary);
+  margin: 10px 0 40px;
+  margin-bottom: 60px;
+
+  border-radius: 5px;
+  padding: 8px;
+}

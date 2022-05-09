@@ -1,5 +1,4 @@
 import React, {useState} from 'react'
-import {preventDefaults, validFileType} from '../Helpers'
 import {nanoid} from 'nanoid'
 
 const Context = React.createContext()
@@ -7,6 +6,8 @@ const Context = React.createContext()
 function ContextProvider({children}) {
 
     const [allImages, setAllImages] = useState([])
+    const [settings, setSettings] = useState(true)
+    const [imageDimensionsPosition, setImageDimensionsPosition] = useState("end")
 
     function addImage(image) {
         const objImg = {
@@ -28,7 +29,11 @@ function ContextProvider({children}) {
         <Context.Provider value={{
             addImage,
             allImages,
-            removeImage
+            removeImage,
+            settings,
+            setSettings,
+            imageDimensionsPosition,
+            setImageDimensionsPosition,
         }}
         >
             {children}
